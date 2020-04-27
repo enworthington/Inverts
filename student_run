@@ -1,0 +1,21 @@
+install.packages("shiny")
+install.packages("ExPanDaR")
+install.packages("gapminder")
+install.packages("tidyverse")
+
+library(shiny)
+library(ExPanDaR)
+library(gapminder)
+library(tidyverse)
+
+ExPanD(df = traits, 
+       title = "Invertebrates",
+       abstract = paste("This interactive display uses data from",
+                        "the weekly assignment"),
+       components = c(subset_factor = TRUE,
+                      bar_chart = TRUE,
+                      histogram = TRUE, 
+                      descriptive_table = FALSE, 
+                      by_group_violin_graph = FALSE, 
+                      scatter_plot = TRUE,
+                      regression = FALSE))
